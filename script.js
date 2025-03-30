@@ -45,4 +45,7 @@ function createFloatingEmojis() {
 // ページ読み込み時に実行
 document.addEventListener('DOMContentLoaded', function () {
     createFloatingEmojis();
-}); 
+});
+
+// フローティング絵文字生成機能を削除
+// 印刷向けにJavaScriptは不要なので空にする 

@@ -12,59 +12,42 @@
 
 body {
     font-family: 'Yusei Magic', 'Kosugi Maru', sans-serif;
-    background: linear-gradient(135deg, #ff66cc, #ffcc00, #66ffcc, #ff99ff);
+    background-color: #fff8ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ff99cc' fill-opacity='0.15'%3E%3Cpath d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     color: #333;
     line-height: 1.6;
     position: relative;
     min-height: 100vh;
     padding: 20px;
-    animation: bg-animation 20s infinite alternate;
-}
-
-@keyframes bg-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.7);
-    background-image: url('https://i.pinimg.com/originals/e8/a3/ef/e8a3ef2b5671b8b3d4fc30d9b17b59fa.jpg');
-    background-blend-mode: overlay;
-    background-size: 200px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffccff' fill-opacity='0.25' fill-rule='evenodd'/%3E%3C/svg%3E");
     border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5),
-        0 0 20px rgba(255, 255, 0, 0.3),
-        0 0 40px rgba(0, 255, 255, 0.2);
+    padding: 50px 30px 30px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: visible;
-    border: 5px solid;
-    border-image: linear-gradient(45deg, #ff00cc, #ffcc00, #00ffcc, #ff66ff) 1;
-    background-color: rgba(255, 248, 255, 0.7);
-    z-index: 10;
-    backdrop-filter: blur(2px);
+    border: 3px solid #ff99cc;
 }
 
 .container::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='3' fill='%23ffccff' opacity='0.3'/%3E%3C/svg%3E");
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 2px dashed #ffccff;
+    border-radius: 25px;
     z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(45deg, transparent 50%, #ffccff 50%, transparent 51%);
+    background-size: 10px 10px;
+    opacity: 0.3;
 }
 
 .header {
@@ -78,7 +61,7 @@ body {
     display: block;
     width: 80%;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #ff66cc, transparent);
+    background: linear-gradient(90deg, #ffffff, #ff99cc, #ffffff);
     margin: 15px auto;
 }
 
@@ -86,45 +69,10 @@ h1 {
     font-family: 'RocknRoll One', sans-serif;
     font-size: 2.5rem;
     color: #ff0066;
-    text-shadow: 2px 2px 0 #fff,
-        3px 3px 0 #ff99cc,
-        4px 4px 0 #ffcc00,
-        5px 5px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
     letter-spacing: 1px;
-    animation: rainbow-text 5s infinite;
     font-weight: normal;
-    transform: rotate(-1deg);
-}
-
-@keyframes rainbow-text {
-    0% {
-        color: #ff0066;
-    }
-
-    16% {
-        color: #ff3399;
-    }
-
-    32% {
-        color: #cc33ff;
-    }
-
-    48% {
-        color: #3399ff;
-    }
-
-    64% {
-        color: #33cc33;
-    }
-
-    80% {
-        color: #ffcc00;
-    }
-
-    100% {
-        color: #ff0066;
-    }
+    text-shadow: 1px 1px 0 #ffccff, 2px 2px 3px rgba(255, 153, 204, 0.3);
 }
 
 h2 {
@@ -142,65 +90,33 @@ h2 {
 }
 
 .rule-card {
-    background: linear-gradient(135deg, #fff, #fff8ff);
-    border: 3px solid;
-    border-image: linear-gradient(45deg, #ff66cc, #ffcc00, #66ffcc) 1;
+    background: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #fff8ff);
+    border: 2px solid #ff99cc;
     border-radius: 15px;
     padding: 15px;
     display: flex;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3),
-        0 0 10px rgba(255, 255, 0, 0.2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
 }
 
 .rule-card::before {
-    content: "★";
+    content: "✨";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    color: #ffcc00;
-    font-size: 2rem;
-    text-shadow: 0 0 5px #ff66cc;
-    animation: spin 5s linear infinite;
-    z-index: 1;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.rule-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://i.pinimg.com/originals/e0/32/5b/e0325b103e9d3b701374d8d8ddf7b3d1.jpg');
-    background-size: 100px;
-    opacity: 0.05;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.rule-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5),
-        0 0 15px rgba(255, 255, 0, 0.4);
+    top: -2px;
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    color: #ffccff;
+    font-size: 12px;
+    opacity: 0.7;
 }
 
 .rule-number {
     font-family: 'Stick', sans-serif;
-    background: linear-gradient(135deg, #ff3399, #ff99cc);
+    background: linear-gradient(135deg, #ff99cc, #ff80bf);
     color: white;
     width: 45px;
     height: 45px;
@@ -211,12 +127,11 @@ h2 {
     font-size: 1.5rem;
     font-weight: normal;
     margin-right: 15px;
-    box-shadow: 0 3px 5px rgba(255, 105, 180, 0.5),
-        0 0 10px rgba(255, 255, 0, 0.3);
     flex-shrink: 0;
     position: relative;
     z-index: 1;
     border: 2px solid white;
+    box-shadow: 0 0 5px rgba(255, 153, 204, 0.5);
 }
 
 .rule-content {
@@ -230,21 +145,14 @@ h2 {
     font-size: 1.2rem;
     color: #ff0066;
     margin-bottom: 5px;
-    text-shadow: 1px 1px 0 #fff;
     font-weight: bold;
     letter-spacing: 0.5px;
-    transform: skew(-3deg, 0);
 }
 
 .rule-content p {
     font-family: 'Yusei Magic', sans-serif;
     font-size: 1rem;
     color: #333;
-    background: linear-gradient(90deg, #ff66b2, #cc66ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
     letter-spacing: 0.5px;
 }
 
@@ -259,106 +167,6 @@ h2 {
     font-size: 0.8rem;
     color: #ff99cc;
     margin-top: 20px;
-}
-
-.decoration {
-    position: fixed;
-    font-size: 2.5rem;
-    animation: float 5s infinite ease-in-out;
-    z-index: 5;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
-}
-
-.decoration-1 {
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
-}
-
-.decoration-2 {
-    top: 20%;
-    right: 10%;
-    animation-delay: 1s;
-}
-
-.decoration-3 {
-    bottom: 15%;
-    left: 8%;
-    animation-delay: 2s;
-}
-
-.decoration-4 {
-    bottom: 25%;
-    right: 5%;
-    animation-delay: 3s;
-}
-
-.decoration-5 {
-    top: 50%;
-    left: 90%;
-    animation-delay: 4s;
-}
-
-.decoration-6 {
-    top: 35%;
-    left: 15%;
-    animation-delay: 1.5s;
-    font-size: 3rem;
-}
-
-.decoration-7 {
-    top: 65%;
-    right: 15%;
-    animation-delay: 2.5s;
-    font-size: 3.5rem;
-}
-
-.decoration-8 {
-    top: 80%;
-    left: 40%;
-    animation-delay: 3.5s;
-    font-size: 2.8rem;
-}
-
-.decoration-9 {
-    top: 25%;
-    left: 25%;
-    animation-delay: 2.8s;
-    font-size: 3.2rem;
-}
-
-.decoration-10 {
-    top: 70%;
-    right: 25%;
-    animation-delay: 1.8s;
-    font-size: 2.7rem;
-}
-
-.decoration-11 {
-    bottom: 10%;
-    right: 40%;
-    animation-delay: 3.2s;
-    font-size: 3.3rem;
-}
-
-.decoration-12 {
-    top: 40%;
-    right: 30%;
-    animation-delay: 2.2s;
-    font-size: 2.9rem;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(10deg);
-    }
 }
 
 @media (max-width: 768px) {
@@ -387,14 +195,6 @@ h2 {
     .rule-content p {
         font-size: 0.9rem;
     }
-
-    .header {
-        margin-top: 0;
-    }
-
-    .pop-icon {
-        font-size: 2.5rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -419,212 +219,33 @@ h2 {
         margin-right: 0;
         margin-bottom: 10px;
     }
+}
 
-    .pop-icon {
-        font-size: 2rem;
-        opacity: 0.7;
+@media print {
+    body {
+        background-color: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 0;
     }
 
-    .header {
-        margin-top: 0;
-    }
-}
-
-/* キラキラエフェクト */
-.glitter-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 61,40 98,40 68,62 79,95 50,75 21,95 32,62 2,40 39,40' fill='%23ffff00' opacity='0.2'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='10' fill='%23ff66cc' opacity='0.15'/%3E%3C/svg%3E");
-    background-size: 100px, 50px;
-}
-
-/* POPなバナーを元の位置に戻す */
-/* .pop-banner {
-    position: absolute;
-    top: -25px;
-    right: 20px;
-    transform: rotate(5deg);
-    background: linear-gradient(to bottom, #ff0066, #cc0052);
-    color: #fff;
-    font-family: 'Stick', sans-serif;
-    font-size: 2rem;
-    padding: 8px 25px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4),
-        0 0 30px rgba(255, 0, 102, 0.3);
-    z-index: 100;
-    border: 4px solid #fff;
-    border-radius: 12px;
-    text-shadow: 3px 3px 0 #000;
-    animation: fight-pulse 2s infinite;
-    letter-spacing: 1px;
-    font-weight: bold;
-} */
-
-/* FIGHTバナーのアニメーションを元に戻す */
-/* @keyframes fight-pulse {
-    0% {
-        transform: rotate(5deg) scale(1);
-        text-shadow: 3px 3px 0 #000;
-    }
-    
-    50% {
-        transform: rotate(5deg) scale(1.1);
-        text-shadow: 4px 4px 0 #000, 0 0 15px #ff99cc;
-    }
-    
-    100% {
-        transform: rotate(5deg) scale(1);
-        text-shadow: 3px 3px 0 #000;
-    }
-} */
-
-/* ポップなアイコン */
-.pop-icon {
-    position: fixed;
-    font-size: 3rem;
-    z-index: 5;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
-    animation: float-pop 7s infinite ease-in-out;
-}
-
-.pop-icon-1 {
-    top: 15%;
-    left: 10%;
-    animation-delay: 0.5s;
-    font-size: 4rem;
-}
-
-.pop-icon-2 {
-    top: 25%;
-    right: 15%;
-    animation-delay: 1.5s;
-    font-size: 3.5rem;
-}
-
-.pop-icon-3 {
-    bottom: 20%;
-    left: 12%;
-    animation-delay: 2.5s;
-    font-size: 4.2rem;
-}
-
-.pop-icon-4 {
-    bottom: 30%;
-    right: 10%;
-    animation-delay: 3.5s;
-    font-size: 3.8rem;
-}
-
-.pop-icon-5 {
-    top: 60%;
-    left: 5%;
-    animation-delay: 1s;
-    font-size: 3.3rem;
-}
-
-.pop-icon-6 {
-    top: 45%;
-    right: 8%;
-    animation-delay: 2s;
-    font-size: 4.5rem;
-}
-
-.pop-icon-7 {
-    bottom: 10%;
-    left: 25%;
-    animation-delay: 3s;
-    font-size: 3.7rem;
-}
-
-.pop-icon-8 {
-    top: 10%;
-    right: 25%;
-    animation-delay: 0s;
-    font-size: 4rem;
-}
-
-@keyframes float-pop {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg) scale(1);
+    .container {
+        box-shadow: none;
+        padding: 10px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    33% {
-        transform: translateY(-15px) rotate(10deg) scale(1.1);
+    .rule-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
-    66% {
-        transform: translateY(10px) rotate(-5deg) scale(0.9);
+    .rule-number {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
-}
-
-/* 追加の装飾要素 */
-.decoration-13 {
-    top: 55%;
-    left: 20%;
-    animation-delay: 0.7s;
-    font-size: 3.7rem;
-}
-
-.decoration-14 {
-    top: 30%;
-    left: 40%;
-    animation-delay: 1.7s;
-    font-size: 3.4rem;
-}
-
-.decoration-15 {
-    bottom: 40%;
-    right: 20%;
-    animation-delay: 2.7s;
-    font-size: 3.6rem;
-}
-
-.decoration-16 {
-    top: 75%;
-    right: 35%;
-    animation-delay: 3.7s;
-    font-size: 3.2rem;
-}
-
-/* フローティング絵文字のスタイル */
-.floating-emoji {
-    position: fixed;
-    z-index: 1;
-    opacity: 0.6;
-    pointer-events: none;
-    animation: float-emoji linear infinite;
-}
-
-@keyframes float-emoji {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(var(--move-x), var(--move-y)) rotate(var(--rotate-deg));
-    }
-}
-
-.header,
-.rules-container,
-.rule-card,
-.rule-content,
-.footer {
-    position: relative;
-    z-index: 5;
-}
-
-.rule-content h3,
-.rule-content p,
-.header h1,
-.header h2 {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
