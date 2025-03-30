@@ -38,7 +38,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.7);
     background-image: url('https://i.pinimg.com/originals/e8/a3/ef/e8a3ef2b5671b8b3d4fc30d9b17b59fa.jpg');
     background-blend-mode: overlay;
     background-size: 200px;
@@ -48,10 +48,12 @@ body {
         0 0 20px rgba(255, 255, 0, 0.3),
         0 0 40px rgba(0, 255, 255, 0.2);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border: 5px solid;
     border-image: linear-gradient(45deg, #ff00cc, #ffcc00, #00ffcc, #ff66ff) 1;
-    background-color: #fff8ff;
+    background-color: rgba(255, 248, 255, 0.7);
+    z-index: 10;
+    backdrop-filter: blur(2px);
 }
 
 .container::before {
@@ -263,7 +265,7 @@ h2 {
     position: fixed;
     font-size: 2.5rem;
     animation: float 5s infinite ease-in-out;
-    z-index: -1;
+    z-index: 5;
     opacity: 0.8;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
 }
@@ -386,10 +388,8 @@ h2 {
         font-size: 0.9rem;
     }
 
-    .pop-banner {
-        font-size: 1.4rem;
-        top: -10px;
-        right: -10px;
+    .header {
+        margin-top: 0;
     }
 
     .pop-icon {
@@ -399,11 +399,15 @@ h2 {
 
 @media (max-width: 480px) {
     .container {
-        padding: 15px;
+        padding: 20px 15px;
     }
 
     h1 {
         font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
     }
 
     .rule-card {
@@ -416,13 +420,13 @@ h2 {
         margin-bottom: 10px;
     }
 
-    .pop-banner {
-        font-size: 1.2rem;
-        padding: 3px 15px;
-    }
-
     .pop-icon {
         font-size: 2rem;
+        opacity: 0.7;
+    }
+
+    .header {
+        margin-top: 0;
     }
 }
 
@@ -434,50 +438,57 @@ h2 {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: -1;
+    z-index: 2;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 61,40 98,40 68,62 79,95 50,75 21,95 32,62 2,40 39,40' fill='%23ffff00' opacity='0.2'/%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='10' fill='%23ff66cc' opacity='0.15'/%3E%3C/svg%3E");
     background-size: 100px, 50px;
 }
 
-/* POPなバナー */
-.pop-banner {
+/* POPなバナーを元の位置に戻す */
+/* .pop-banner {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    background: #ff0066;
+    top: -25px;
+    right: 20px;
+    transform: rotate(5deg);
+    background: linear-gradient(to bottom, #ff0066, #cc0052);
     color: #fff;
     font-family: 'Stick', sans-serif;
-    font-size: 1.8rem;
-    padding: 5px 20px;
-    transform: rotate(15deg);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    padding: 8px 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(255, 0, 102, 0.3);
     z-index: 100;
-    border: 3px solid #fff;
-    border-radius: 8px;
-    text-shadow: 2px 2px 0 #000;
-    animation: pulse 2s infinite;
-}
+    border: 4px solid #fff;
+    border-radius: 12px;
+    text-shadow: 3px 3px 0 #000;
+    animation: fight-pulse 2s infinite;
+    letter-spacing: 1px;
+    font-weight: bold;
+} */
 
-@keyframes pulse {
+/* FIGHTバナーのアニメーションを元に戻す */
+/* @keyframes fight-pulse {
     0% {
-        transform: rotate(15deg) scale(1);
+        transform: rotate(5deg) scale(1);
+        text-shadow: 3px 3px 0 #000;
     }
-
+    
     50% {
-        transform: rotate(15deg) scale(1.1);
+        transform: rotate(5deg) scale(1.1);
+        text-shadow: 4px 4px 0 #000, 0 0 15px #ff99cc;
     }
-
+    
     100% {
-        transform: rotate(15deg) scale(1);
+        transform: rotate(5deg) scale(1);
+        text-shadow: 3px 3px 0 #000;
     }
-}
+} */
 
 /* ポップなアイコン */
 .pop-icon {
     position: fixed;
     font-size: 3rem;
-    z-index: -1;
+    z-index: 5;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
     animation: float-pop 7s infinite ease-in-out;
 }
@@ -581,4 +592,39 @@ h2 {
     right: 35%;
     animation-delay: 3.7s;
     font-size: 3.2rem;
+}
+
+/* フローティング絵文字のスタイル */
+.floating-emoji {
+    position: fixed;
+    z-index: 1;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: float-emoji linear infinite;
+}
+
+@keyframes float-emoji {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(var(--move-x), var(--move-y)) rotate(var(--rotate-deg));
+    }
+}
+
+.header,
+.rules-container,
+.rule-card,
+.rule-content,
+.footer {
+    position: relative;
+    z-index: 5;
+}
+
+.rule-content h3,
+.rule-content p,
+.header h1,
+.header h2 {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
