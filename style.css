@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* フォントをより平成ギャル風に調整 */
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+body {
+    font-family: 'Yusei Magic', 'Kosugi Maru', sans-serif;
+    background: linear-gradient(135deg, #ff66cc, #ffcc00, #66ffcc, #ff99ff);
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+    animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-image: url('https://i.pinimg.com/originals/e8/a3/ef/e8a3ef2b5671b8b3d4fc30d9b17b59fa.jpg');
+    background-blend-mode: overlay;
+    background-size: 200px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5),
+        0 0 20px rgba(255, 255, 0, 0.3),
+        0 0 40px rgba(0, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid;
+    border-image: linear-gradient(45deg, #ff00cc, #ffcc00, #00ffcc, #ff66ff) 1;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="3" fill="%23ffccff" opacity="0.3"/></svg>');
+    z-index: -1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff66cc, transparent);
+    margin: 15px auto;
+}
+
+h1 {
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 2.5rem;
+    color: #ff0066;
+    text-shadow: 2px 2px 0 #fff,
+        3px 3px 0 #ff99cc,
+        4px 4px 0 #ffcc00,
+        5px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    animation: rainbow-text 5s infinite;
+    font-weight: normal;
+    transform: rotate(-1deg);
+}
+
+@keyframes rainbow-text {
+    0% {
+        color: #ff0066;
+    }
+
+    16% {
+        color: #ff3399;
+    }
+
+    32% {
+        color: #cc33ff;
+    }
+
+    48% {
+        color: #3399ff;
+    }
+
+    64% {
+        color: #33cc33;
+    }
+
+    80% {
+        color: #ffcc00;
+    }
+
+    100% {
+        color: #ff0066;
+    }
+}
+
+h2 {
+    font-family: 'Hachi Maru Pop', sans-serif;
+    font-size: 1.2rem;
+    color: #ff66b2;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.rules-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.rule-card {
+    background: linear-gradient(135deg, #fff, #fff8ff);
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #ff66cc, #ffcc00, #66ffcc) 1;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3),
+        0 0 10px rgba(255, 255, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rule-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+.rule-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/originals/e0/32/5b/e0325b103e9d3b701374d8d8ddf7b3d1.jpg');
+    background-size: 100px;
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.rule-card:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+}
+
+.rule-number {
+    font-family: 'Stick', sans-serif;
+    background: linear-gradient(135deg, #ff3399, #ff99cc);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-right: 15px;
+    box-shadow: 0 3px 5px rgba(255, 105, 180, 0.5),
+        0 0 10px rgba(255, 255, 0, 0.3);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    border: 2px solid white;
+}
+
+.rule-content {
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.rule-content h3 {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 1.2rem;
+    color: #ff0066;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transform: skew(-3deg, 0);
+}
+
+.rule-content p {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    background: linear-gradient(90deg, #ff66b2, #cc66ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px dashed #ffccff;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #ff99cc;
+    margin-top: 20px;
+}
+
+.decoration {
+    position: fixed;
+    font-size: 2.5rem;
+    animation: float 5s infinite ease-in-out;
+    z-index: -1;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+}
+
+.decoration-1 {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.decoration-2 {
+    top: 20%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.decoration-3 {
+    bottom: 15%;
+    left: 8%;
+    animation-delay: 2s;
+}
+
+.decoration-4 {
+    bottom: 25%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+.decoration-5 {
+    top: 50%;
+    left: 90%;
+    animation-delay: 4s;
+}
+
+.decoration-6 {
+    top: 35%;
+    left: 15%;
+    animation-delay: 1.5s;
+    font-size: 3rem;
+}
+
+.decoration-7 {
+    top: 65%;
+    right: 15%;
+    animation-delay: 2.5s;
+    font-size: 3.5rem;
+}
+
+.decoration-8 {
+    top: 80%;
+    left: 40%;
+    animation-delay: 3.5s;
+    font-size: 2.8rem;
+}
+
+.decoration-9 {
+    top: 25%;
+    left: 25%;
+    animation-delay: 2.8s;
+    font-size: 3.2rem;
+}
+
+.decoration-10 {
+    top: 70%;
+    right: 25%;
+    animation-delay: 1.8s;
+    font-size: 2.7rem;
+}
+
+.decoration-11 {
+    bottom: 10%;
+    right: 40%;
+    animation-delay: 3.2s;
+    font-size: 3.3rem;
+}
+
+.decoration-12 {
+    top: 40%;
+    right: 30%;
+    animation-delay: 2.2s;
+    font-size: 2.9rem;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .rule-card {
+        padding: 12px;
+    }
+
+    .rule-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .rule-content h3 {
+        font-size: 1rem;
+    }
+
+    .rule-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .rule-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rule-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
